@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo "dffffffffffffffffffffonmdeeeeeeeeeeeeeeeef"'
+                sh 'df -hT'
+                pritln("hello all")
             }
         }
     }
