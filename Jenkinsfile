@@ -1,11 +1,7 @@
-pipeline {
-    agent { docker { image 'python:3.10.1-alpine' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'df -hT'
-                pritln("hello all")
-            }
+node {
+   docker.image('node:16.13.1-alpine').inside {
+        stage('Test') {
+            sh 'node --version'
         }
     }
 }
