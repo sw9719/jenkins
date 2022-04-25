@@ -1,7 +1,7 @@
 node {
-   docker.image('node:16.13.1-alpine').inside {
+   docker.image('docker.io/bitnami/python').inside {
         stage('Test') {
-            sh 'node --version'
+            sh 'python --version'
         }
     }
 }
