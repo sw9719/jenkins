@@ -1,7 +1,21 @@
-node {
-   docker.image('docker.io/bitnami/python').inside {
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
         stage('Test') {
-            sh 'python --version'
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
 }
